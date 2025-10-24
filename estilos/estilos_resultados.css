@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #004080;
+    margin-top: 20px;
+}
+
+/* =========================
+   TABLA DE RESULTADOS
+========================= */
+
+.tabla-resultados {
+    margin: 20px auto;
+    max-width: 800px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #004080;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* =========================
+   BARRAS DE RESULTADOS
+========================= */
+
+.barras-resultados {
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.barra {
+    margin-bottom: 15px;
+}
+
+.barra span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #004080;
+}
+
+.progreso {
+    background-color: #004080;
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: right;
+    transition: width 0.5s ease;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 8px;
+}

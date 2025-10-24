@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Votar – Elecciones 2025</title>
+  <link rel="stylesheet" href="../estilos/estilos_votar.css">
+  <script src="../js/header_sesion.js"></script>
+</head>
+
+<body>
+  <div class="contenedor">
+
+    <!-- Header dinámico -->
+    <header class="encabezado-principal"></header>
+
+    <main>
+      <h2>🗳️ Votación Elecciones 2025</h2>
+
+      <form id="formVotar">
+        <!-- Documento -->
+        <section class="datos-votante">
+          <h3>Identificación del Votante</h3>
+          <div class="form-group">
+            <label for="documento">Número de documento</label>
+            <input type="text" id="documento" name="documento" placeholder="Ej: 123456789" required>
+          </div>
+        </section>
+
+        <!-- Candidatos -->
+        <section class="lista-candidatos">
+          <h3>Selecciona tu candidato</h3>
+          <div id="candidatosGrid" class="candidatos-grid">
+            <!-- Candidatos dinámicos (ejemplo estático) -->
+            <label class="candidato-card">
+              <input type="radio" name="candidato" value="1" required>
+              <img src="../img/carrusel1.jpg" alt="candidato 1">
+              <h4>Candidato 1</h4>
+              <p>Grado 11 - Grupo A</p>
+            </label>
+
+            <label class="candidato-card">
+              <input type="radio" name="candidato" value="2">
+              <img src="../img/carrusel2.jpg" alt="Candidato 2">
+              <h4>Candidato 2</h4>
+              <p>Grado 10 - Grupo B</p>
+            </label>
+
+            <label class="candidato-card">
+              <input type="radio" name="candidato" value="3">
+              <img src="../img/carrusel3.jpg" alt="Candidato 3">
+              <h4>Candidato 3</h4>
+              <p>Grado 9 - Grupo C</p>
+            </label>
+          </div>
+        </section>
+
+        <!-- Botón votar -->
+        <div style="text-align: center; margin-top: 30px;">
+          <button type="submit">✅ Confirmar Voto</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 - Colegio Ejemplo. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("formVotar").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const documento = document.getElementById("documento").value;
+      const candidato = document.querySelector("input[name='candidato']:checked");
+
+      if (!candidato) {
+        alert("Por favor selecciona un candidato antes de continuar.");
+        return;
+      }
+
+      alert("✅ Voto registrado con éxito.\nDocumento: " + documento + "\nCandidato: " + candidato.value);
+      // Aquí luego conectamos con el backend para registrar el voto real
+    });
+  </script>
+</body>
+</html>
